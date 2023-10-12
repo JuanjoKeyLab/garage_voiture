@@ -1,8 +1,82 @@
-// $primary: pour manipuler des variables 
-@import url('/node_modules/bootstrap-icons/font/bootstrap-icons.min.css');
-@import '_custom.scss';
-//custom code here
+@import "custom";
 
-body{
-    padding-top: 50px;
+
+body {
+  padding-top: 30px;
+    background: linear-gradient(to right, rgba(131, 33, 33, 0.591), rgb(241, 234, 234)); /* Fondo con degradado lineal */
+  }
+  
+  header {
+    background: linear-gradient(to top, rgba(234, 205, 205, 0.591), rgba(230, 37, 37, 0.182));
+    background: linear-gradient(to right, rgba(213, 46, 46, 0.591), rgb(109, 99, 99));
 }
+
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+.logo {
+  width: 55px;
+  height: 35px;
+}
+
+.btn {
+    background-color: rgba(169, 58, 58, 0.249);
+    transition: background-color 1s; /* Duración de la transición */
+  }
+  
+  .btn:hover {
+    background-color: rgb(247, 196, 196);
+  }
+
+  
+ .navbar-brand {
+        transition: all 0.5s ease; /* Duración y función de la transición */
+      }
+      
+      .navbar-brand:hover {
+        opacity: 0.8; /* Opacidad al pasar el cursor */
+        transform: scale(1.1); /* Escala al pasar el cursor */
+      }
+      
+  .index{
+    position: relative;
+    z-index: 2;
+  }
+
+  .texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+  }
+.garage {
+    opacity: 30%;
+    transition: opacity 1s; /* Duración de la transición */
+  }
+  
+  .garage:hover {
+   opacity: 80%;
+  }
+
+  .titre {
+    opacity: 30%;
+    color: rgba(169, 58, 58, 0.249);
+    transition: opacity 1s; /* Duración de la transición */
+  }
+  
+  .titre:hover {
+   opacity: 80%;
+   color: aliceblue;
+  }
+

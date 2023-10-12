@@ -1,9 +1,6 @@
-// $primary: pour manipuler des variables 
-$bg-warning: #FD7F20; 
-$bg-danger: #FC2E20;
-$bg-warning: #FDB750;
-$bg-black:#5c5c1b;
-$breadcrumb-divider: quote(">");
+//customisation bootstrap
+//include all of bootstrap
+$warning: rgba(169, 58, 58, 0.249);
+$secondary: rgb(255, 255, 255);
 
-@import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-//custom code here
+@import "../../node_modules/bootstrap/scss/bootstrap"

@@ -1,5 +1,7 @@
-import "../../node_modules/bootstrap/js/dist/model.js";
-import "../../node_modules/bootstrap/js/dist/util.js";
+import '../../node_modules/bootstrap/js/dist/modal.js';
+// import '../../node_modules/bootstrap/js/dist/util.js';
+
+$.fn.tooltip.Constructor.VERSION // => "4.0.0"S
 
 const listCategories = document.querySelector(".list-categories");
 const listArticles = document.querySelector("#allArticles");

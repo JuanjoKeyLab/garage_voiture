@@ -1,16 +1,15 @@
-
+// $warning-color: linear-gradient(to right, rgba(131, 33, 33, 0.591), rgb(241, 234, 234));
+// .warning {
+//   background-image: $warning-color;
+// }
 @import "custom";
 
 
 body {
-  padding-top: 30px;
+  padding-top: 100px;
     background: linear-gradient(to right, rgba(131, 33, 33, 0.591), rgb(241, 234, 234)); /* Fondo con degradado lineal */
   }
   
-  header {
-    // background: linear-gradient(to top, rgba(234, 205, 205, 0.591), rgba(230, 37, 37, 0.182));
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.591), rgb(186, 32, 32));
-}
 
 .carousel-item img {
   width: 100%;

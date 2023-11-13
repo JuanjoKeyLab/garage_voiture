@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/scss/main.css">
+    <link rel="stylesheet" href="assets/css/stylev.css">
+    <link href="node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top navbar-warning bg-warning">
+          <div class="container">
+<!-- logo entreprise             -->
+            <a class="navbar-brand justify-content-left" href= "index.html">
+                <img src="img/logo.png" alt="logo" class="img-fluid" width="100px" height="45px">
+            </a>
+<!-- BUTTON EXPAND -->
+            <button class="navbar-toggler btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+              <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="index.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="voiture.html">Voitures </a>
+                </li>
+                <li class="nav-item dropdown"> 
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Nos services
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="controle-technique.html">Contrôle technique</a></li>
+                    <li><a class="dropdown-item" href="carroserie.html">Carroserie</a></li>
+                    <li><a class="dropdown-item" href="#">Entretien et révision</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="tous-services.html">Autres services</a></li>
+                  </ul>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="nous.html">Qui sommes nous</a>
+                  </li>
+              </ul> 
+              <div class="d-inline-block"
+                data-bs-toggle="tooltip" title="Mon panier"
+                data-bs-placement="bottom">
+                <button class="btn btn-outline-primary"
+                        data-bs-toggle="modal" 
+                        data-bs-target= "#modalPanier">                      
+                    <svg xmlns="http://www.w3.org/2000/svg" 
+                        width="16" height="16" fill="currentColor" 
+                        class="bi bi-cart2" viewBox="0 0 16 16">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                    </svg>   
+                </button>
+              </div>
+              <div class="d-inline-block"
+                 data-bs-toggle="tooltip" title="Connexion"
+                 data-bs-placement="bottom">
+                <button class="btn btn-outline-primary"
+                        data-bs-toggle="modal" 
+                        data-bs-target="#modalConnexion"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" 
+                        class="bi bi-person" viewBox="0 0 16 16">
+                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                    </svg>  
+                </button>
+              </div>
+            </div>
+            </div>
+            </div>
+          </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <section>
+            <div class="container text-start">
+              <div class="row">
+                <div class="text-center">
+                  <h1 class="fs-2 mb-5 text-red-bold"> Mention légales</h1>
+                </div>
+
+<h2>Identification du site</h2>
+<p>Nom du site : Garage Parrrot <br>
+Adresse du site : https://www.carrosserie-dupont.fr 
+</p>
+<h2>Identification du propriétaire du site </h2>
+<p>
+Propriétaire : SARL Carrosserie Dupont Adresse : 12 rue des Fleurs, 34000 Montpellier Numéro d’identification au RCS : 123 456 789 Numéro de TVA : FR 12 345 678 910 Capital social : 10 000 € Téléphone : 04 67 12 34 56 Email : contact@carrosserie-dupont.fr
+</p>
+<br>
+<h2>Directeur de la publication</h2>
+<p> Jean Dupont, gérant de la SARL Carrosserie Dupont Email : jean.dupont@carrosserie-dupont.fr</p>
+
+<h2>Propriété intellectuelle</h2>
+<p>Le contenu du site (textes, images, logos, vidéos, etc.) est la propriété exclusive de la SARL Carrosserie Dupont, sauf mention contraire. Toute reproduction, représentation, diffusion ou exploitation du contenu du site sans l’autorisation écrite du propriétaire est interdite et constitue une contrefaçon sanctionnée par le Code de la propriété intellectuelle.</p>
+
+
+<h2>Données personnelles</h2>
+<p>Le site collecte et traite des données personnelles des utilisateurs dans le respect de la loi n° 78-17 du 6 janvier 1978 relative à l’informatique, aux fichiers et aux libertés, modifiée par le règlement (UE) 2016/679 du 27 avril 2016 relatif à la protection des données personnelles (RGPD).
+</p>
+
+<h2>
+Les données personnelles collectées sont notamment </h2>
+<p>
+Les nom, prénom, adresse, email, téléphone des utilisateurs qui remplissent le formulaire de contact ou de devis en ligne ;
+les données de navigation des utilisateurs sur le site, telles que l’adresse IP, le type de navigateur, la durée de la visite, les pages consultées, etc.
+Les finalités du traitement des données personnelles sont notamment :
+de répondre aux demandes des utilisateurs ;
+de fournir les services proposés par le site ;
+d’améliorer la qualité du site et de son contenu ;
+de réaliser des statistiques et des analyses ;
+de respecter les obligations légales et réglementaires.</p>
+
+<h2>Les destinataires des données personnelles sont notamment :</h2>
+<p>le propriétaire du site et ses employés,
+l’hébergeur du site,
+les prestataires techniques ou commerciaux du site,
+les autorités compétentes en cas de réquisition judiciaire.
+Les données personnelles sont conservées pendant la durée nécessaire à la réalisation des finalités pour lesquelles elles ont été collectées, dans la limite des délais légaux ou contractuels applicables.
+Les utilisateurs disposent d’un droit d’accès, de rectification, d’effacement, de limitation, d’opposition et de portabilité de leurs données personnelles. Ils peuvent exercer ces droits en contactant le propriétaire du site à l’adresse email indiquée ci-dessus. Ils peuvent également introduire une réclamation auprès de la Commission nationale de l’informatique et des libertés (CNIL).<br>
+Le site utilise des cookies, qui sont des fichiers textes déposés sur le terminal des utilisateurs lors de leur visite sur le site. Les cookies permettent de reconnaître les utilisateurs, de personnaliser leur expérience, de mesurer l’audience du site et de proposer des publicités ciblées. <br>
+Les utilisateurs peuvent accepter ou refuser les cookies en modifiant les paramètres de leur navigateur.</p>
+
+<h2>Responsabilité</h2>
+<p>Le propriétaire du site s’efforce de fournir des informations exactes et à jour sur le site, mais ne garantit pas l’exactitude, l’exhaustivité, l’actualité ou la pertinence des informations disponibles sur le site. Le propriétaire du site décline toute responsabilité en cas d’erreur, d’omission, d’inexactitude ou de défaut de mise à jour des informations du site.</p>
+<p>Le propriétaire du site n’est pas responsable du contenu des sites externes vers lesquels il renvoie par des liens hypertextes. Ces liens sont proposés à titre informatif et n’impliquent pas l’adhésion ou la validation du propriétaire du site aux contenus des sites externes.
+Le propriétaire du site n’est pas responsable des dommages directs ou indirects causés aux utilisateurs ou à leurs équipements du fait de l’accès, de l’utilisation ou du téléchargement du site ou de son contenu. Le propriétaire du site ne peut être tenu pour responsable en cas d’interruption, de dysfonctionnement ou d’indisponibilité du site ou de ses services.</p>
+                </div>
+              </div>
+            </div>
+        </section>
+    </main>
+
+                                                <!-- footer  -->
+
+             <div class="row">
+                <div class="container footer bg-warning">
+                  <div class="row cols-3 justify-content-center">
+                    <div class="col-6 col-md-3">
+                      <div class="row">
+                        <div class="d-flex justify-content-center my-3 ml-4">
+                          <label for="">
+                            Trouvez nous
+                            <br>
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <strong>
+                              1 rue de l'Aqueduc
+                            <br>
+                            31500 TOULOUSE
+                            </strong>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="col-6 col-md-3">
+                      <!-------- chargement des horaires du footer ------->
+                      <div id="footerSchedules">
+                        <div id="Schedules">
+                          <div class="d-flex justify-content-center text-center my-3">
+                            <p class="horairesFooter">
+                                <strong>NOS HORAIRES </strong>
+                                <br>
+                                <i class="bi bi-calendar2-check"></i>
+                                Lundi au vendredi:
+                                9h-12h / 14h-18h <br>
+                                le samedi de
+                                9h-12h
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- TELEPHONE -->
+          
+                    <div class="col-6 col-md-3">
+                      <div class="d-flex justify-content-center my-3">
+                          <label>Contactez-nous <br>
+                            <i class="bi bi-telephone-fill"></i>
+                            <strong>01.23.45.67.89</strong>
+                            </label>
+                      </div>
+                      <div class="row">
+                        <div class="d-flex justify-content-center">
+                          <a href="www.facebook.com">
+                            <i class="bi bi-facebook"></i>
+                          </a>
+                          <a href="">
+                            <i class=""></i>
+                            <i class="bi bi-dash"></i>
+                          </a>
+                          <a href="www.instagram.com">
+                            <i class="bi bi-instagram"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                   
+          
+                  </div>
+                </div>
+                <div class="text-center text-warning font-14px bg-dark">
+                  <p class="p-footer">
+                      © VINCENT PARROT AUTOMOBILES 2023. Tous droits réservés. -           
+                      -
+                      <a class="no-underline text-grey" href="mentions-legales.html">Mentions légales</a>
+                      -
+                      <a class="no-underline text-grey" href="politique.html">Politique de
+                          confidentialité</a>
+                      -
+                      <a class="no-underline text-grey" href="consommateur.html">Informations consommateurs</a>
+                  </p>
+                  </div>
+          
+            </div>
+                <!-- FIN FOOTER -->
+  <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script> -->
+  <script type ="module" src="assets/js/script.js"></script>
+
+</body>
+
+</html> 

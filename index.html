@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/scss/main.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
-    <title>Document</title>
+    <link href="node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <title>Index Garage V.Parrot</title>
 </head>
 <body>
     <header>
@@ -23,38 +24,34 @@
                 <div class="collapse navbar-collapse" id="navbarScroll">
                   <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                      <a class="nav-link accueil active" aria-current="page" href="#">Accueil</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="voiture.html">Voitures </a>
+                      <a class="nav-link accueil" aria-current="page" href="voiture.php">Voitures </a>
                     </li>
                     <li class="nav-item dropdown"> 
-                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <a class="nav-link dropdown-toggle accueil" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Nos services
                       </a>
                       <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Contrôle technique</a></li>
-                        <li><a class="dropdown-item" href="#">Carroserie</a></li>
-                        <li><a class="dropdown-item" href="#">Entretien et révision</a></li>
+                        <li><a class="dropdown-item" href="controle-technique.html">Contrôle technique</a></li>
+                        <li><a class="dropdown-item" href="carroserie.html">Carroserie</a></li>
+                        <li><a class="dropdown-item" href="revision.html">Entretien et révision</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Autres services</a></li>
+                        <li><a class="dropdown-item" href="tous-services.html">Tous services</a></li>
                       </ul>
                     </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Qui sommes nous</a>
+                      <li class="nav-item accueil">
+                        <a class="nav-link" aria-current="page" href="nous.html">Qui sommes nous</a>
                       </li>
                   </ul> 
                   <div class="d-inline-block"
-                    data-bs-toggle="tooltip" title="Mon panier"
+                    data-bs-toggle="tooltip" title="Contactez-nous"
                     data-bs-placement="bottom">
                     <button class="btn btn-outline-primary"
                             data-bs-toggle="modal" 
                             data-bs-target= "#modalPanier">                      
-                        <svg xmlns="http://www.w3.org/2000/svg" 
-                            width="16" height="16" fill="currentColor" 
-                            class="bi bi-cart2" viewBox="0 0 16 16">
-                            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
-                        </svg>   
+                            <i class="bi bi-person-lines-fill"></i>                  
                     </button>
                   </div>
                   <div class="d-inline-block"
@@ -63,10 +60,7 @@
                     <button class="btn btn-outline-primary"
                             data-bs-toggle="modal" 
                             data-bs-target="#modalConnexion"> 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" 
-                            class="bi bi-person" viewBox="0 0 16 16">
-                            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
-                        </svg>  
+                            <i class="bi bi-file-earmark-person"></i>
                     </button>
                   </div>
                 </div>
@@ -88,17 +82,17 @@
       <img class="d-block w-100 rounded img-fluid" src="img/controle-technique.jpg" alt="First slide">
     </div>
     <div class="carousel-item" data-bs-interval="">
-      <img class="d-block w-100 rounded img-fluid"  src="img/rev_slider_main.jpg" alt="Second slide">
+      <img class="d-block w-100 rounded img-fluid"  src="img/clio2023.jpg" alt="Second slide">
     </div>
     <div class="carousel-item" data-bs-interval="">
       <img class="d-block w-100 rounded img-fluid" src="img/essai-autonomie-peugeot-e-208.jpg" alt="Third slide">
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+  <a class="carousel-control-prev col-sm-6 col-md-3" href="#carouselExampleControls" role="button" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+  <a class="carousel-control-next col-sm-6 col-md-3" href="#carouselExampleControls" role="button" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
@@ -116,14 +110,7 @@
                         <img src="img/OIG.jpg" class="img-fluid garage imagen" alt="img responsive">
                       </div>  
                     </div>
-                    <div class="col-md-12 text-center text-secondary texto titre jumbotron">
-                        <h1 class="display-4"> Acheter votre vehicle</h1>
-                            <p class="my-4">Beaucoup de nouveaux voitures chaque jour pour vous</p> 
-                            <p class="lead">
-                              <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-                            </p>
-                        
-                    </div>
+                    
                 </div>
             </div>
 
@@ -132,14 +119,16 @@
   <div class="row">
       <div class="container">
         <div class="text-center text-wrap my-3 bg-dark fw-semibold fs-3">
-            <p class="my-auto">
+            <p class="my-auto accueil">
               <a class="text-warning" href="voiture.html">Consultez notre catalogue ici. Il y a plus de 1000
                 voitures disponibles</a>
             </p>
+        </div>
       </div>
   </div>
     <!-- fin catalogue  -->
 
+                          <!-- CARDS  -->
          <div class="row">
             <div class="list-articles mt-2 text-center col-12 col-lg-12">
                 <div class="row" id="allVoitures">  
@@ -154,7 +143,7 @@
                                 <meta itemprop="description" content="Renault Clio RT occasion (1997) color rouge prix $2500">
                                 <a itemprop="url" href="" title="Renault Clio RT occasion (1997) color rouge prix $2500">
                                     <figure class="listing-card__image">
-                                        <img src="img/renault/Clio/renault_clio_rt.jpg" width="180px">
+                                        <img src="img/renault/Clio/renault_clio_rt.jpg">
                                     </figure>
                                     <div class="row">
                                         <div class="listing-card__content">
@@ -251,7 +240,8 @@
                                       <div class="listing-card__car">
                                           <span class="listing-card__brand" itemprop="brand">Toyota</span>
                                           <div class="listing-card__name" itemprop="model">
-                                              <span class="listing-card__model">Land Cruiser</span> <span class="listing-card__version">Prado</span>
+                                              <span class="listing-card__model">Land Cruiser</span> 
+                                              <span class="listing-card__version">Prado</span>
                                           </div>
                                       </div>
                                           <div class="listing-card__info m-ellipsis">
@@ -276,86 +266,149 @@
                       <p class="card-text"><small id="card-date" class="text-muted"></small></p>
                     </div>
                   </div>
-              </article>
-
-
+                </article>                             
                 </div>
               </div>
           </div>
-      </div>
-
-
-<!-- SLIDERS FOR CART -->
-        <div class="filtre-titre display-closed js-icone_plus opened">
-              <span class="title">Prix
-                  <span class="count"> (1)
-                  </span>
-              </span>
-            <div class="icone-plus closed">
-                <div class="position-horizontal">              
-                </div>
-                <div class="position-vertical">                
-                </div>
-            </div>        
-        </div>
-        <div class="filtre-block">
-          <div class="slider-block slider-amount">
-              <span class="slider-value slider-millier">
-                  <span class="slider-value-max-units">+
-                    <span class="slider-value-max">15 500                    
-                    </span> €
-                  </span>
-                  <span class="slider-value-min-units">
-                    <span class="slider-value-min">3 000
-                    </span> €
-                  </span>
-              </span>  
-            <div class="slider slider-horizontal" id="slider-input-amount">
-                <div class="slider-track">
-                  <div class="slider-track-low" style="left: 0px; width: 3%;">               
-                  </div>
-                  <div class="slider-selection" style="left: 3%; width: 12.5%;">               
-                  </div>
-                  <div class="slider-track-high" style="right: 0px; width: 84.5%;">                
-                  </div>
-                </div>
-                <div class="tooltip tooltip-main top hide" role="presentation" style="left: 9.25%;">
-                  <div class="tooltip-arrow">      
-                  </div>
-                  <div class="tooltip-inner">3000 : 15500               
-                  </div>
-                </div>
-                <div class="tooltip tooltip-min top hide" role="presentation" style="left: 3%;">
-                  <div class="tooltip-arrow">               
-                  </div>
-                  <div class="tooltip-inner">3000               
-                  </div>
-                </div>
-                <div class="tooltip tooltip-max top hide" role="presentation" style="left: 15.5%;">
-                  <div class="tooltip-arrow">           
-                  </div>
-                  <div class="tooltip-inner">15500            
-                  </div>
-                </div>
-                <div class="slider-handle min-slider-handle round" role="slider" aria-valuemin="0" aria-valuemax="100000" style="left: 3%;" aria-valuenow="3000" tabindex="0" id="amount-min">              
-                </div>
-                <div class="slider-handle max-slider-handle round" role="slider" aria-valuemin="0" aria-valuemax="100000" style="left: 15.5%;" aria-valuenow="15500" tabindex="0" id="amount-max">              
-                </div>
-            </div>
-              <input type="text" name="amount" id="amount" value="3000,15500" class="slider-input" data-slider-id="slider-input-amount" data-slider-min="0" data-slider-max="100000" data-slider-step="500" data-slider-value="[0,100000]" data-slider-orientation="horizontal" data-slider-tooltip="hide" style="display: none;" data-value="3000,15500" data-actif="true">            
-          </div>
-        </div>
-  
       
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 text-center text-secondary">
+      <h1 class="display-4"> Avis de nos clients</h1>
+        <div id="reviews">
+          <div class="avis mx-5 my-3">★★★★★<p></p>
+            <p><i>Tout ce que l'on cherche chez un garage (et que l'on ne trouve que si rarement) :
+               conseil de vente, juste prix des réparations, très forte expertise mécanique, 
+               fiabilité de l'équipe dirigeante.</i></p>
+          </div>
+          <div class="avis mx-5 my-3">★★★★★<p></p>
+            <p><i>Rien a dire, accueil parfait. Transaction parfaite !</i></p>
+          </div>
+          <div class="avis mx-5 my-3">★★★★★<p></p>
+            <p><i>Prise de rendez-vous rapide ! Tout est bien expliqué et clair ( prix, les différentes prestations 
+              des garages ).</i></p>
+          </div>
+          <div class="avis mx-5 my-3">★★★★★<p></p>
+            <p><i>Franchement, excellent garage , sympathique, convivial, à l'écoute des clients et essaie au maximum 
+              de les aider. Je recommande !</i></p>
+          </div>
+          <div class="avis mx-5 my-3">★★★★★<p></p>
+            <p><i>Très content d'avoir découvert vos services !  Rapide, efficace et pas cher !</i></p>
+          </div>
+          <div class="avis mx-5 my-3">★★★★★<p></p>
+            <p><i>Super garage, merci pour votre aide!</i></p>
+            </div>
+        </div>
+            <p class="my-4">Beaucoup de nouveaux voitures chaque jour pour vous</p> 
+            <p class="lead">
+              <a class="btn btn-primary btn-lg" href="#" role="button">Donnez votre Avis</a>
+            </p>  
+    </div> 
+    <div class="col-xs-12 col-md-4 px-0">
+      <h2 class="findUsIndex">NOUS TROUVER</h2>
+      <div class="line findUsIndex"></div><br>
+      <iframe id="G-mapsIndex" class="" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2807.0408949540347!2d1.4565806397916736!3d43.60043122187372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aebc91eee39de5%3A0x65af583ce587c93e!2s1%20Rue%20de%20l'Aqueduc%2C%2031500%20Toulouse!5e0!3m2!1sfr!2sfr!4v1685465874382!5m2!1sfr!2sfr" width="390" height="390" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+  </div>
+</div> 
+
+</div>
         
-     </main>
+</section>  
+</main>
+
+
+                                              <!-- footer  -->
+
+     <div class="row">
+      <div class="container footer bg-warning">
+        <div class="row cols-3 justify-content-center">
+          <div class="col-6 col-md-3">
+            <div class="row">
+              <div class="d-flex justify-content-center my-3 ml-4">
+                <label for="">
+                  Trouvez nous
+                  <br>
+                  <i class="bi bi-geo-alt-fill"></i>
+                  <strong>
+                    1 rue de l'Aqueduc
+                  <br>
+                  31500 TOULOUSE
+                  </strong>
+                </label>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-6 col-md-3">
+            <!-------- chargement des horaires du footer ------->
+            <div id="footerSchedules">
+              <div id="Schedules">
+                <div class="d-flex justify-content-center text-center my-3">
+                  <p class="horairesFooter">
+                      <strong>NOS HORAIRES </strong>
+                      <br>
+                      <i class="bi bi-calendar2-check"></i>
+                      Lundi au vendredi:
+                      9h-12h / 14h-18h <br>
+                      le samedi de
+                      9h-12h
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- TELEPHONE -->
+
+          <div class="col-6 col-md-3">
+            <div class="d-flex justify-content-center my-3">
+                <label>Contactez-nous <br>
+                  <i class="bi bi-telephone-fill"></i>
+                  <strong>01.23.45.67.89</strong>
+                  </label>
+            </div>
+            <div class="row">
+              <div class="d-flex justify-content-center">
+                <a href="www.facebook.com">
+                  <i class="bi bi-facebook"></i>
+                </a>
+                <a href="">
+                  <i class=""></i>
+                  <i class="bi bi-dash"></i>
+                </a>
+                <a href="www.instagram.com">
+                  <i class="bi bi-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+         
+
+        </div>
+      </div>
+      <div class="text-center text-warning font-14px bg-dark">
+        <p class="p-footer">
+            © VINCENT PARROT AUTOMOBILES 2023. Tous droits réservés. -           
+            -
+            <a class="no-underline text-grey" href="mentions-legales.html">Mentions légales</a>
+            -
+            <a class="no-underline text-grey" href="politique.html">Politique de
+                confidentialité</a>
+                -
+            <a class="no-underline text-grey" href="consommateur.html">Informations consommateurs</a>
+        </p>
+    </div>
+
+     </div>
 
                     <!-- Modal panier -->
                     <div class="modal fade" id="modalPanier" tabindex="-1" aria-labelledby="modalPanierLabel" aria-hidden="true">
                         <div class="modal-dialog">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h1 class="modal-title fs-5" id="modalPanierLabel">Mon Panier</h1>
+                              <h1 class="modal-title fs-5" id="modalPanierLabel">Contactez-nous</h1>
                               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">

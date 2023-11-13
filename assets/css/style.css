@@ -24,7 +24,7 @@ section {
 }
 
 .carousel-item {
-    height: 810px; 
+    /* height: 810px;  */
   }
 
   .carousel-item img {
@@ -33,4 +33,22 @@ section {
     object-fit: cover;
   }
 
-  
+  .findUsIndex {
+    text-align: center;
+  }
+
+  .line {
+    margin-left: 20px;
+  border: 1px solid black;
+  height: 1px;
+  width: 250px;
+  }
+
+  .accueil {
+    transition: all 0.5s ease; 
+  }
+
+  .accueil:hover {
+  opacity: 0.8; /* Opacidad al pasar el cursor */
+  transform: scale(1.1); /* Escala al pasar el cursor */
+  }

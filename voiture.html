@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/scss/main.css">
     <link rel="stylesheet" href="assets/css/stylev.css">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
-    <title>voitures</title>
+    <link href="node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
   
-<?php
+<!-- <?php
 require_once 'car_detail.php'; // Incluye las constantes de conexión
 
 // Crea una conexión
@@ -48,73 +47,72 @@ $price = $_POST['price'];
 $photo = $_POST['photo'];
 $description = $_POST['description'];
 ?>
+ -->
 
 
-
-  <header>
-    <nav class="navbar navbar-expand-lg fixed-top navbar-warning bg-warning">
-      <div class="container">
+ <header>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-warning bg-warning">
+    <div class="container">
 <!-- logo entreprise             -->
-        <a class="navbar-brand justify-content-left" href= "index.html">
-            <img src="img/logo.png" alt="logo" class="img-fluid" width="100px" height="45px">
-        </a>
+      <a class="navbar-brand justify-content-left" href= "index.html">
+          <img src="img/logo.png" alt="logo" class="img-fluid" width="100px" height="45px">
+      </a>
 <!-- BUTTON EXPAND -->
-        <button class="navbar-toggler btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+      <button class="navbar-toggler btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link accueil active" aria-current="page" href="#">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link accueil" aria-current="page" href="voiture.php">Voitures </a>
+          </li>
+          <li class="nav-item dropdown"> 
+            <a class="nav-link dropdown-toggle accueil" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Nos services
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="controle-technique.html">Contrôle technique</a></li>
+              <li><a class="dropdown-item" href="carroserie.html">Carroserie</a></li>
+              <li><a class="dropdown-item" href="revision.html">Entretien et révision</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="tous-services.html">Tous services</a></li>
+            </ul>
+          </li>
+            <li class="nav-item accueil">
+              <a class="nav-link" aria-current="page" href="nous.html">Qui sommes nous</a>
+            </li>
+        </ul> 
+        <div class="d-inline-block"
+          data-bs-toggle="tooltip" title="Contactez-nous"
+          data-bs-placement="bottom">
+          <button class="btn btn-outline-primary"
+                  data-bs-toggle="modal" 
+                  data-bs-target= "#modalPanier">                      
+                  <i class="bi bi-person-lines-fill"></i>                  
           </button>
-        <div class="collapse navbar-collapse" id="navbarScroll">
-          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-            <li class="nav-item">
-              <a class="nav-link accueil" aria-current="page" href="index.html">Accueil</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link accueil active" aria-current="page" href="voiture.html">Voitures </a>
-            </li>
-            <li class="nav-item dropdown"> 
-              <a class="nav-link dropdown-toggle accueil" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Nos services
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="controle-technique.html">Contrôle technique</a></li>
-                <li><a class="dropdown-item" href="carroserie.html">Carroserie</a></li>
-                <li><a class="dropdown-item" href="revision.html">Entretien et révision</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="tous-services.html">Tous services</a></li>
-              </ul>
-            </li>
-              <li class="nav-item accueil">
-                <a class="nav-link" aria-current="page" href="nous.html">Qui sommes nous</a>
-              </li>
-          </ul> 
-          <div class="d-inline-block"
-            data-bs-toggle="tooltip" title="Contactez-nous"
-            data-bs-placement="bottom">
-            <button class="btn btn-outline-primary"
-                    data-bs-toggle="modal" 
-                    data-bs-target= "#modalPanier">                      
-                    <i class="bi bi-person-lines-fill"></i>                  
-            </button>
-          </div>
-          <div class="d-inline-block"
-             data-bs-toggle="tooltip" title="Connexion"
-             data-bs-placement="bottom">
-            <button class="btn btn-outline-primary"
-                    data-bs-toggle="modal" 
-                    data-bs-target="#modalConnexion"> 
-                    <i class="bi bi-file-earmark-person"></i>
-            </button>
-          </div>
         </div>
-        </div>
+        <div class="d-inline-block"
+           data-bs-toggle="tooltip" title="Connexion"
+           data-bs-placement="bottom">
+          <button class="btn btn-outline-primary"
+                  data-bs-toggle="modal" 
+                  data-bs-target="#modalConnexion"> 
+                  <i class="bi bi-file-earmark-person"></i>
+          </button>
         </div>
       </div>
-    </nav>
+    </div>             
+</nav>
 </header>
                                                     <!-- MAIN  -->
   
         <section>
-          <div class="container-fluid">
-            <div class="col-12 col-md-6 col-lg-3 d-flex flex-column my-1">
+        <div class="container-fluid">
+          <div class="row flex-column align-items-center">
+            <div class="col-12 col-md-2 my-1 d-flex justify-content-center">
                 <select id="brand_id" class ="" name="Marque" style="width: 200px">
                       <option value="">Marque</option>
                     <option value="Citroen">Citroen</option>
@@ -123,7 +121,7 @@ $description = $_POST['description'];
                     <option value="Fiat">Fiat</option>
             </select>
           </div>
-          <div class="col-12 col-md-6 col-lg-3 d-flex flex-column my-1">
+          <div class="col-12 col-md-2 my-1 d-flex justify-content-center">
             <select id="model" class ="" name="model" style="width: 200px">
                   <option value="">Modéle</option>
                 <option value="Clio 1">Clio 1</option>
@@ -135,14 +133,14 @@ $description = $_POST['description'];
       </div>
 
 
-            <div class="col-12 col-md-6 col-lg-3 d-flex flex-column my-1">
+            <div class="col-12 col-md-2 my-1 d-flex justify-content-center">
                 <select id="km" class ="" name="km" style="width: 200px">
                     <option value="">Kilométrage</option>
                     <option value="de 0 à 25000">0-25000km</option>
                     <option value="de 25000 à 50000">25000-50000km</option>
                 </select>
             </div>
-                <div class="col-12 col-md-6 col-lg-3 d-flex flex-column my-1">
+                <div class="col-12 col-md-2 my-1 d-flex justify-content-center">
                   <select id="year" class ="" name="year" style="width: 200px">
                       <option value="">Année</option>
                       <option value="2022">2022</option>
@@ -169,10 +167,11 @@ $description = $_POST['description'];
                   </select>
                 </div>
       
-              <div class="col-12 col-md-6 col-lg-3 d-flex flex-column my-1"> 
+              <div class="col-12 col-md-2 d-flex my-1 justify-content-center"> 
                   <button id="rechercher" onclick="performSearch()" class="btn btn-danger">Rechercher</button>    
             </div>    
         </div>
+      </div>
         <div class="row">
           <div class="list-articles mt-2 text-center col-12 col-lg-12">
               <div class="row" id="allVoitures">  
@@ -213,7 +212,7 @@ $description = $_POST['description'];
                                   </div>    
                               </a>
                           </article>
-                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                              <a href="#" class="btn btn-primary">Acheter</a>
                           </div>
                         <div class="card-footer text-body-secondary">
                           2 days ago
@@ -228,11 +227,11 @@ $description = $_POST['description'];
                         <p class="card-text">Acheter des voitures classiques en parfait état</p>
                         <article class="card listing-card " itemscope="" itemtype="http://">
                             <meta itemprop="itemCondition" content="http:/">
-                            <meta itemprop="name" content="Toyota Land Cruiser">
-                            <meta itemprop="description" content="Toyota Land Cruiser Prado occasion (2006) color blanche prix $4700">
-                            <a itemprop="url" href="" title="Toyota Land Cruiser Prado occasion (2006) color blanche prix $4700">
+                            <meta itemprop="name" content="Toyota rav4">
+                            <meta itemprop="description" content="Toyota rav4 occasion (2011) color blanche prix $6700">
+                            <a itemprop="url" href="" title="Toyota rav4 occasion (2011) color blanche prix $6700">
                                 <figure class="listing-card__image">
-                                    <img src="img/Toyota/prado/toyota_prado_derecha.jpg">
+                                    <img src="img/Toyota/rav4/toyota_rav4_derecha.jpg">
                                 </figure>
                                 <div class="row">
                                     <div class="listing-card__content">
@@ -243,7 +242,7 @@ $description = $_POST['description'];
                                             </div>
                                         </div>
                                             <div class="listing-card__info m-ellipsis">
-                                                <span itemprop="modelDate" class="listing-card__year">2006</span> | <span itemprop="mileageFromOdometer" class="listing-card__km" content="KMT 215000">195305 km</span>
+                                                <span itemprop="modelDate" class="listing-card__year">2011</span> | <span itemprop="mileageFromOdometer" class="listing-card__km" content="KMT 105011">105011 km</span>
                                             </div>
                                         <div class="listing-card__offer" itemprop="offers" itemscope="" itemtype="http://">
                                             <div class="listing-card__location m-ellipsis" itemprop="availableAtOrFrom" itemscope="" itemtype="http://">
@@ -251,14 +250,14 @@ $description = $_POST['description'];
                                             </div>
                                                 <span class="listing-card__price ">
                                                     <meta itemprop="priceCurrency" content="EU">
-                                                    <span class="listing-card__price-value" itemprop="price" content="47000">$4700</span>
+                                                    <span class="listing-card__price-value" itemprop="price" content="6700">$6700</span>
                                                 </span>
                                         </div>
                                     </div>
                                 </div>    
                             </a>
                         </article>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="#" class="btn btn-primary">Acheter</a>
                         </div>
                       <div class="card-footer text-body-secondary">
                         34 days ago
@@ -273,7 +272,7 @@ $description = $_POST['description'];
                     <p class="card-text">Acheter des voitures classiques en parfait état</p>
                     <article class="card listing-card " itemscope="" itemtype="">
                         <meta itemprop="itemCondition" content="http:/">
-                        <meta itemprop="name" content="Toyota Land Cruiser">
+                        <meta itemprop="name" content="Toyota Prado">
                         <meta itemprop="description" content="Toyota Land Cruiser Prado occasion (2006) color blanche prix $4700">
                         <a href="car_details.php?id=34" title="Toyota Land Cruiser Prado occasion (2006) color blanche prix $4700">
                             <figure class="">
@@ -315,27 +314,27 @@ $description = $_POST['description'];
               <article class="col-12 col-md-6 col-xl-4 p-2 index d-md-none d-xl-block">
                 <div class="card text-center bg-warning">
                     <div class="card-body" id="read-car">
-                    <h5 class="card-title">Toyota</h5>
+                    <h5 class="card-title">Renault</h5>
                     <p class="card-text">Acheter des voitures classiques en parfait état</p>
                     <article class="card listing-card " itemscope="" itemtype="">
                         <meta itemprop="itemCondition" content="http:/">
-                        <meta itemprop="name" content="Toyota Land Cruiser">
-                        <meta itemprop="description" content="Toyota Land Cruiser Prado occasion (2006) color blanche prix $4700">
-                        <a href="car_details.php?id=34" title="Toyota Land Cruiser Prado occasion (2006) color blanche prix $4700">
+                        <meta itemprop="name" content="Renault Megane">
+                        <meta itemprop="description" content="Renault Megane occasion (2009) color noire prix $3400">
+                        <a href="car_details.php?id=34" title="Renault Megane occasion (2009) color noire prix $3400">
                             <figure class="">
-                                <img src="img/Toyota/prado/toyota_prado_derecha.jpg">
+                                <img src="img/Renault/Megane/renault_megane_derecha.jpg">
                             </figure>
                             <div class="row">
                                 <div class="listing-card__content">
                                     <div class="listing-card__car">
-                                        <span class="listing-card__brand" itemprop="brand">Toyota</span>
+                                        <span class="listing-card__brand" itemprop="brand">Renault</span>
                                         <div class="listing-card__name" itemprop="model">
-                                            <span class="listing-card__model">Land Cruiser</span> <span class="listing-card__version">Prado</span>
+                                            <span class="listing-card__model">Megane</span> <span class="listing-card__version">Megane</span>
                                         </div>
                                     </div>
                                         <div class="listing-card__info m-ellipsis">
-                                            <span itemprop="year" class="listing-card__year">2006</span> | 
-                                            <span itemprop="km" class="listing-card__km" content="KMT 195305">195305 km</span>
+                                            <span itemprop="year" class="listing-card__year">2009</span> | 
+                                            <span itemprop="km" class="listing-card__km" content="KMT 165303">165303 km</span>
                                         </div>
                                     <div class="listing-card__offer" itemprop="offers" itemscope="" itemtype="http://">
                                         <div class="listing-card__location m-ellipsis" itemprop="availableAtOrFrom" itemscope="" itemtype="http://">
@@ -343,14 +342,14 @@ $description = $_POST['description'];
                                         </div>
                                             <span class="listing-card__price ">
                                                 <meta itemprop="price" content="EU">
-                                                <span class="listing-card__price-value" itemprop="price" content="47000">$4700</span>
+                                                <span class="listing-card__price-value" itemprop="price" content="3700">$3700</span>
                                             </span>
                                     </div>
                                 </div>
                             </div>    
                         </a>
                     </article>
-                        <a href="#" class="btn btn-primary">Plus d'information</a>
+                        <a href="#" class="btn btn-primary">Acheter</a>
                     </div>
                   <div class="card-footer text-body-secondary">
                     <p class="card-text"><small id="card-date" class="text-muted"></small></p>
@@ -365,24 +364,24 @@ $description = $_POST['description'];
                     <p class="card-text">Acheter des voitures classiques en parfait état</p>
                     <article class="card listing-card " itemscope="" itemtype="">
                         <meta itemprop="itemCondition" content="http:/">
-                        <meta itemprop="name" content="Toyota Land Cruiser">
-                        <meta itemprop="description" content="Toyota Land Cruiser Prado occasion (2006) color blanche prix $4700">
-                        <a href="car_details.php?id=34" title="Toyota Land Cruiser Prado occasion (2006) color blanche prix $4700">
+                        <meta itemprop="name" content="Toyota Hilux">
+                        <meta itemprop="description" content="Toyota hilux occasion (2015) color blanche prix $10700">
+                        <a href="car_details.php?id=34" title="Toyota hilux occasion (2015) color blanche prix $10700">
                             <figure class="">
-                                <img src="img/Toyota/prado/toyota_prado_derecha.jpg">
+                                <img src="img/Toyota/hilux/toyota_hilux_derecha.jpg">
                             </figure>
                             <div class="row">
                                 <div class="listing-card__content">
                                     <div class="listing-card__car">
                                         <span class="listing-card__brand" itemprop="brand">Toyota</span>
                                         <div class="listing-card__name" itemprop="model">
-                                            <span class="listing-card__model">Land Cruiser</span> 
-                                            <span class="listing-card__version">Prado</span>
+                                            <span class="listing-card__model">Hilux</span> 
+                                            <span class="listing-card__version">Hilux</span>
                                         </div>
                                     </div>
                                         <div class="listing-card__info m-ellipsis">
-                                            <span itemprop="year" class="listing-card__year">2006</span> | 
-                                            <span itemprop="km" class="listing-card__km" content="KMT 195305">195305 km</span>
+                                            <span itemprop="year" class="listing-card__year">2015</span> | 
+                                            <span itemprop="km" class="listing-card__km" content="KMT 102302">102302 km</span>
                                         </div>
                                     <div class="listing-card__offer" itemprop="offers" itemscope="" itemtype="http://">
                                         <div class="listing-card__location m-ellipsis" itemprop="availableAtOrFrom" itemscope="" itemtype="http://">
@@ -390,14 +389,14 @@ $description = $_POST['description'];
                                         </div>
                                             <span class="listing-card__price ">
                                                 <meta itemprop="price" content="EU">
-                                                <span class="listing-card__price-value" itemprop="price" content="47000">$4700</span>
+                                                <span class="listing-card__price-value" itemprop="price" content="10700">$10700</span>
                                             </span>
                                     </div>
                                 </div>
                             </div>    
                         </a>
                     </article>
-                        <a href="#" class="btn btn-primary">Plus d'information</a>
+                        <a href="#" class="btn btn-primary">Acheter</a>
                     </div>
                   <div class="card-footer text-body-secondary">
                     <p class="card-text"><small id="card-date" class="text-muted"></small></p>
@@ -405,33 +404,51 @@ $description = $_POST['description'];
                 </div>
               </article>  
 
-<div class="row">
-              <h1>Registro de Coche</h1>
-    <form action="car_details.php" method="post">
-        <div>
-            <label for="brand">Marca:</label>
-            <input type="text" id="brand" name="brand" required>
-        </div>
-        <div>
-            <label for="model">Modelo:</label>
-            <input type="text" id="model" name="model" required>
-        </div>
-        <div>
-            <label for="km">Kilómetros:</label>
-            <input type="number" id="km" name="km" required>
-        </div>
-        <div>
-            <label for="photo_id">ID de Foto:</label>
-            <input type="text" id="photo_id" name="photo_id" required>
-        </div>
-        <div>
-            <label for="price">Precio:</label>
-            <input type="number" id="price" name="price" step="0.01" required>
-        </div>
-        <button type="submit" name="submit" value="submit">submit</button>
-    </form>
-
-    </div>
+              <article class="col-12 col-md-6 col-xl-4 p-2 index d-md-none d-xl-block">
+                <div class="card text-center bg-warning">
+                    <div class="card-body" id="read-car">
+                    <h5 class="card-title">Renault</h5>
+                    <p class="card-text">Acheter des voitures classiques en parfait état</p>
+                    <article class="card listing-card " itemscope="" itemtype="">
+                        <meta itemprop="itemCondition" content="http:/">
+                        <meta itemprop="name" content="Toyota Land Cruiser">
+                        <meta itemprop="description" content="Toyota Corolla occasion (2014) color blanche prix $8700">
+                        <a href="car_details.php?id=34" title="Toyota Corolla occasion (2014) color blanche prix $8700">
+                            <figure class="">
+                                <img src="img/Toyota/corolla/toyota_corolla_derecha.jpg">
+                            </figure>
+                            <div class="row">
+                                <div class="listing-card__content">
+                                    <div class="listing-card__car">
+                                        <span class="listing-card__brand" itemprop="brand">Toyota</span>
+                                        <div class="listing-card__name" itemprop="model">
+                                            <span class="listing-card__model">Corolla</span> <span class="listing-card__version">Corolla</span>
+                                        </div>
+                                    </div>
+                                        <div class="listing-card__info m-ellipsis">
+                                            <span itemprop="year" class="listing-card__year">2014</span> | 
+                                            <span itemprop="km" class="listing-card__km" content="KMT 95303">95303 km</span>
+                                        </div>
+                                    <div class="listing-card__offer" itemprop="offers" itemscope="" itemtype="http://">
+                                        <div class="listing-card__location m-ellipsis" itemprop="availableAtOrFrom" itemscope="" itemtype="http://">
+                                        
+                                        </div>
+                                            <span class="listing-card__price ">
+                                                <meta itemprop="price" content="EU">
+                                                <span class="listing-card__price-value" itemprop="price" content="8700">$8700</span>
+                                            </span>
+                                    </div>
+                                </div>
+                            </div>    
+                        </a>
+                    </article>
+                        <a href="#" class="btn btn-primary">Acheter</a>
+                    </div>
+                  <div class="card-footer text-body-secondary">
+                    <p class="card-text"><small id="card-date" class="text-muted"></small></p>
+                  </div>
+                </div>
+              </article>  
 
               </div>
             </div>

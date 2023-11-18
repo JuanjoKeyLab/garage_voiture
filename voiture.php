@@ -11,41 +11,43 @@
 <body>
   
 <!-- <?php
-require_once 'car_detail.php'; // Incluye las constantes de conexión
+// require_once 'car_detail.php'; // Incluye las constantes de conexión
 
 // Crea una conexión
-$conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+// $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
 // Verifica la conexión
-if ($conn->connect_error) {
+/* if ($conn->connect_error) {
     die("La conexión falló: " . $conn->connect_error);
-}
+} */
 
 
-echo "Conexión exitosa";
+// echo "Conexión exitosa";
 
 // Envía una consulta
-$sql = "SELECT * FROM vehiculos WHERE brand='Toyota' AND km<100000 AND year>2010";
-$result = $conn->query($sql);
+// $sql = "SELECT * FROM allVoiture";
+// $result = $conn->query($sql);
 
-// Imprime los resultados
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        echo "Brand: " . $row["brand"] . " - Model: " . $row["model"] . " - Kilometers: " . $row["km"] . " - Year of circulation: " . $row["year"] . "<br>";
-    }
-} else {
-    echo "No se encontraron resultados.";
-}
+// // Imprime los resultados
+// if ($result->num_rows > 0) {
+//     while ($row = $result->fetch_assoc()) {
+//         echo "Brand: " . $row["brand"] . " - Model: " . $row["model"] . " - Kilometers: " . $row["km"] . " - Year of circulation: " . $row["year"] . "<br>";
+//     }
+// } else {
+//     echo "No se encontraron resultados.";
+// }
 
-// Cierra la conexión
-$conn->close();
+// // Cierra la conexión
+// $conn->close();
 
-$brand = $_POST['brand'];
-$model = $_POST['model'];
-$km = $_POST['km'];
-$price = $_POST['price'];
-$photo = $_POST['photo'];
-$description = $_POST['description'];
+
+
+// $brand = $_POST['brand'];
+// $model = $_POST['model'];
+// $km = $_POST['km'];
+// $price = $_POST['price'];
+// $photo = $_POST['photo'];
+// $description = $_POST['description'];
 ?>
  -->
 
@@ -64,10 +66,10 @@ $description = $_POST['description'];
       <div class="collapse navbar-collapse" id="navbarScroll">
         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           <li class="nav-item">
-            <a class="nav-link accueil active" aria-current="page" href="#">Accueil</a>
+            <a class="nav-link accueil" aria-current="page" href="index.html">Accueil</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link accueil" aria-current="page" href="voiture.php">Voitures </a>
+            <a class="nav-link accueil active" aria-current="page" href="voiture.php">Voitures </a>
           </li>
           <li class="nav-item dropdown"> 
             <a class="nav-link dropdown-toggle accueil" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -175,7 +177,7 @@ $description = $_POST['description'];
         <div class="row">
           <div class="list-articles mt-2 text-center col-12 col-lg-12">
               <div class="row" id="allVoitures">  
-                  <article class="col-12 col-md-6 col-xl-4 p-2">
+                  <!-- <article class="col-12 col-md-6 col-xl-4 p-2">
                       <div class="card text-center bg-warning">
                           <div class="card-body">
                           <h5 class="card-title">Renault</h5>
@@ -212,10 +214,10 @@ $description = $_POST['description'];
                                   </div>    
                               </a>
                           </article>
-                              <a href="#" class="btn btn-primary">Acheter</a>
+                              <a href="formulaire_voiture.html" class="btn btn-primary">Acheter</a>
                           </div>
                         <div class="card-footer text-body-secondary">
-                          2 days ago
+                      
                         </div>
                       </div>
                   </article>
@@ -257,10 +259,10 @@ $description = $_POST['description'];
                                 </div>    
                             </a>
                         </article>
-                            <a href="#" class="btn btn-primary">Acheter</a>
+                            <a href="formulaire_voiture.html" class="btn btn-primary">Acheter</a>
                         </div>
                       <div class="card-footer text-body-secondary">
-                        34 days ago
+                        
                       </div>
                     </div>
                 </article>
@@ -303,7 +305,7 @@ $description = $_POST['description'];
                             </div>    
                         </a>
                     </article>
-                        <a href="#" class="btn btn-primary">Plus d'information</a>
+                        <a href="formulaire_voiture.html" class="btn btn-primary">Acheter</a>
                     </div>
                   <div class="card-footer text-body-secondary">
                     <p class="card-text"><small id="card-date" class="text-muted"></small></p>
@@ -349,7 +351,7 @@ $description = $_POST['description'];
                             </div>    
                         </a>
                     </article>
-                        <a href="#" class="btn btn-primary">Acheter</a>
+                        <a href="formulaire_voiture.html" class="btn btn-primary">Acheter</a>
                     </div>
                   <div class="card-footer text-body-secondary">
                     <p class="card-text"><small id="card-date" class="text-muted"></small></p>
@@ -396,7 +398,7 @@ $description = $_POST['description'];
                             </div>    
                         </a>
                     </article>
-                        <a href="#" class="btn btn-primary">Acheter</a>
+                        <a href="formulaire_voiture.html" class="btn btn-primary">Acheter</a>
                     </div>
                   <div class="card-footer text-body-secondary">
                     <p class="card-text"><small id="card-date" class="text-muted"></small></p>
@@ -411,7 +413,7 @@ $description = $_POST['description'];
                     <p class="card-text">Acheter des voitures classiques en parfait état</p>
                     <article class="card listing-card " itemscope="" itemtype="">
                         <meta itemprop="itemCondition" content="http:/">
-                        <meta itemprop="name" content="Toyota Land Cruiser">
+                        <meta itemprop="name" content="Toyota corolla">
                         <meta itemprop="description" content="Toyota Corolla occasion (2014) color blanche prix $8700">
                         <a href="car_details.php?id=34" title="Toyota Corolla occasion (2014) color blanche prix $8700">
                             <figure class="">
@@ -442,64 +444,18 @@ $description = $_POST['description'];
                             </div>    
                         </a>
                     </article>
-                        <a href="#" class="btn btn-primary">Acheter</a>
+                        <a href="formulaire_voiture.html" class="btn btn-primary">Acheter</a>
                     </div>
                   <div class="card-footer text-body-secondary">
                     <p class="card-text"><small id="card-date" class="text-muted"></small></p>
                   </div>
                 </div>
-              </article>  
+              </article>   -->
 
               </div>
             </div>
         </div>
   
-
-        <!-- <div id="voitures">
-          <div id="read-car" class="container fluid rounded">
-              <a class="" href="car_details.php?id=34">
-                <div>
-                  <img id="img-car" class="" src="//*sdqsdqsdqsdq*/" alt="photo voiture">
-                </div>
-                <div class="">
-                  <p class="text-center">
-                    nom auto
-                  </p>
-                  <p>
-                    Km: 12000 km                  
-                  </p>
-                  <p>
-
-                  </p>
-                  <p>
-                    <b>2900 £</b>
-                  </p>
-                </div>
-              </a>
-          </div> 
-
-          <div id="read-car" class="container fluid rounded">
-            <a class="" href="car_details".php?id=34>
-              <div>
-                <img id="img-car" class="" src="//*sdqsdqsdqsdq*/" alt="photo voiture">
-              </div>
-              <div class="">
-                <p class="text-center">
-                  nom auto 2
-                </p>
-                <p>
-                  Km: 12000 km                  
-                </p>
-                <p>
-
-                </p>
-                <p>
-                  <b>2900 £</b>
-                </p>
-              </div>
-            </a>
-        </div>  -->
-
       
                 <!-- PAGINATION  -->
 
@@ -521,92 +477,6 @@ $description = $_POST['description'];
           </ul>
         </nav>
 
-        <!-- <div class="container-fluid mx-0 px-0">
-          <ul class="paginationCustom px-0 mt-3">
-            <li class="page-item" id="1">
-              <span class="page-link">⟨⟨             
-              </span>
-            </li>        
-            <li class="page-item" id="1 ">
-              <span class="page-link">⟨                
-              </span>
-            </li>
-          <li class="page-item " id="1">
-            <span class="page-link">1              
-            </span>
-          </li>
-          <li class="page-item active" id="2">
-            <span class="page-link">2             
-            </span>
-          </li>
-        </ul>
-      </div> -->
-
-    
-
-
-
-        <!-- SLIDERS FOR CART -->;
-        <!-- <div class="filtre-titre display-closed js-icone_plus opened">
-          <span class="title">Prix
-              <span class="count"> (1)
-              </span>
-          </span>
-        <div class="icone-plus closed">
-            <div class="position-horizontal">              
-            </div>
-            <div class="position-vertical">                
-            </div>
-        </div>        
-    </div>
-    <div class="filtre-block">
-      <div class="slider-block slider-amount">
-          <span class="slider-value slider-millier">
-              <span class="slider-value-max-units">+
-                <span class="slider-value-max">15 500                    
-                </span> €
-              </span>
-              <span class="slider-value-min-units">
-                <span class="slider-value-min">3 000
-                </span> €
-              </span>
-          </span>  
-        <div class="slider slider-horizontal" id="slider-input-amount">
-            <div class="slider-track">
-              <div class="slider-track-low" style="left: 0px; width: 3%;">               
-              </div>
-              <div class="slider-selection" style="left: 3%; width: 12.5%;">               
-              </div>
-              <div class="slider-track-high" style="right: 0px; width: 84.5%;">                
-              </div>
-            </div>
-            <div class="tooltip tooltip-main top hide" role="presentation" style="left: 9.25%;">
-              <div class="tooltip-arrow">      
-              </div>
-              <div class="tooltip-inner">3000 : 15500               
-              </div>
-            </div>
-            <div class="tooltip tooltip-min top hide" role="presentation" style="left: 3%;">
-              <div class="tooltip-arrow">               
-              </div>
-              <div class="tooltip-inner">3000               
-              </div>
-            </div>
-            <div class="tooltip tooltip-max top hide" role="presentation" style="left: 15.5%;">
-              <div class="tooltip-arrow">           
-              </div>
-              <div class="tooltip-inner">15500            
-              </div>
-            </div>
-            <div class="slider-handle min-slider-handle round" role="slider" aria-valuemin="0" aria-valuemax="100000" style="left: 3%;" aria-valuenow="3000" tabindex="0" id="amount-min">              
-            </div>
-            <div class="slider-handle max-slider-handle round" role="slider" aria-valuemin="0" aria-valuemax="100000" style="left: 15.5%;" aria-valuenow="15500" tabindex="0" id="amount-max">              
-            </div>
-        </div>
-          <input type="text" name="amount" id="amount" value="3000,15500" class="slider-input" data-slider-id="slider-input-amount" data-slider-min="0" data-slider-max="100000" data-slider-step="500" data-slider-value="[0,100000]" data-slider-orientation="horizontal" data-slider-tooltip="hide" style="display: none;" data-value="3000,15500" data-actif="true">            
-      </div>
-    </div> -->
-  
   </section>
 
 
@@ -693,11 +563,115 @@ $description = $_POST['description'];
 </div>
 
           <!-- fin footer -->
-      
+       <!-- Modal panier -->
+       <div class="modal fade" id="modalPanier" tabindex="-1" aria-labelledby="modalPanierLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="modalPanierLabel">Contactez-nous</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="col-12 col-md-8 col-xl-6 m-auto">    
+                <form class="text-grey fs-6" id="contactForm" action="leaveMessage.php" method="POST">
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <label>Nom *</label>
+                                    <input value="" data-msg-required="Votre nom" maxlength="100" class="form-control" name="nom" id="nom" required="required" aria-required="true" type="text">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Prénom *</label>
+                                    <input value="" data-msg-required="Votre prénom" maxlength="100" class="form-control" name="prenom" id="prenom" required="required" aria-required="true" type="text">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label>Email *</label>
+                                <input value="" data-msg-required="Votre email" data-msg-email="Adresse email non valide" maxlength="100" class="form-control" name="email" id="email" required="required" aria-required="true" type="email">
+                            </div>
+                            <div class="col-md-12">
+                                <label>Téléphone *</label>
+                                <input value="" data-msg-required="Votre telephone" maxlength="100" class="form-control" name="telephone" id="telephone" required="required" aria-required="true" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <label>Sujet</label>
+                                <input value="" data-msg-required="Sujet" maxlength="100" class="form-control" name="sujet" id="sujet" required="required" aria-required="true" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <label>Message *</label>
+                                <textarea maxlength="5000" data-msg-required="Please enter your message." rows="10" class="form-control" name="message" id="message" required="required" aria-required="true"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row margin_bottom_20">
+                        <div class="col-md-12">
+                            <input value="1" name="rgpd" type="checkbox" required="required">
+                            <span class="small">En soumettant ce formulaire, j'accepte que les
+                                informations saisies soient exploitées dans le cadre
+                                de la relation commerciale qui peut en découler.
+                                <a href="politique.html" target="_blank">En savoir
+                                    plus</a></span>
+                        </div>
+                    </div>
+                    <div class="row my-4">
+                        <div class="col-md-12">
+                            <input value="Envoyer" name="envoimsg" class="btn btn-form btn-lg mb-xlg" data-loading-text="Loading..." type="submit">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Retour</button>
+              <button type="button" class="btn btn-primary">Valider le panier</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- Modal Connexion-->      
+
+<div class="modal fade" id="modalConnexion" tabindex="-1" aria-labelledby="modalConnexionLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h1 class="modal-title fs-5" id="modalConnexionLabel">Me connecter</h1>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<div class="mb-3">
+<label for="exampleFormControlInput1" class="form-label">Email address</label>
+<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+</div>
+
+<div class="mb-3">
+<label for="password" class="form-label">Password</label>
+<input type="password" class="form-control" id="password">
+</div>
+<div>
+<button class="btn btn-outline-success"> Connexion </button>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+
   <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script> -->
-  <script type ="module" src="assets/js/script.js"></script>
+  <script type="module" src="assets/js/script.js"></script>
 
 </body>
 

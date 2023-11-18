@@ -80,45 +80,37 @@
     <main>
         <section>
             
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-                <div class="col">
-                  <div class="card bg-light">
-                    <img src="img/mecanique.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title text-center">Reparation mecanique et entretien</h5>
-                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="card">
-                    <img src="img/Penture-carrosserie.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title text-center">Peinture et Carroserie</h5>
-                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="card">
-                    <img src="img/pieces-detachees.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title text-center">Accesoires voiture</h5>
-                      <p class="card-text">Batteries pour voiture et moto, disques de freins, filtres à huile, pneus, etc..</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="card">
-                    <img src="img/control-tech2.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title"></h5>
-                      <p class="card-text">Pour protéger votre véhicule de l’émission de gaz polluants dans l’atmosphère, les automobilistes doivent soumettre régulièrement leur voitures ou automobiles à un contrôle technique (CT)</p>
-                    </div>
-                  </div>
-                </div>
+          <div class="container my-3 mt-3">
+            <div class="my-2 m-auto text-center">
+              <label for="note" class="">Note notre service:</label>
+              
+              <select class="my-2" id="noteAddComment" name="note" required="">
+                
+                <option value="1">1 étoile</option>
+                <option value="2">2 étoiles</option>
+                <option value="3">3 étoiles</option>
+                <option value="4">4 étoiles</option>
+                <option value="5">5 étoiles</option>
+              </select>
+            </div>
+            <form action="add_review.php" method="POST">
+              <div class="my-3">
+                <label for="nom">Nom :</label>
+                <input type="text" class="my-3 form-control" id="nomAddComment" name="nom" required="">
               </div>
-            
+              <div class="my-3">
+                <label for="commentaire">Commentaire :</label>
+                <textarea class="my-3 form-control" id="commentaireAddComment" name="commentaire" required=""></textarea>
+              </div>
+              
+              <div class="text-center">
+                <button type="submit" name="envoiReview" class="my-5 btn btn-danger">
+                  Ajouter un avis
+                </button>
+              </div>
+            </form>
+          </div>
+         
 
         </section>
     </main>

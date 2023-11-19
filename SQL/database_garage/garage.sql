@@ -182,8 +182,8 @@ CREATE TABLE ajouter(
 # alimentation, code, donnees
 
 INSERT INTO allVoitures (brand_id, model, year, price, km, description) VALUES ('renault', 'clio', 1997, 1800, 176540, 'Diesel, boat manual et trois ports');
-INSERT INTO photos(photo_id, model_id, photos) VALUES (1,'renault_clio_rt',LOAD_FILE('../img/renault_clio_rt.jpg')),
-                                                    (2,'renault_clio_rt_derecha', LOAD_FILE('../img/renault_clio_rt_derecha.jpg')),
-                                                    (3, 'renault_clio_rt_back', LOAD_FILE('../img/renault_clio_rt_back.jpg')),
-                                                    (4, 'renault_clio_rt_interior', LOAD_FILE('../img/renault_clio_rt_interior.jpg'));
+        INSERT INTO photos(photo_id, model_id, photos) VALUES (1,'renault_clio_rt',LOAD_FILE('../img/renault_clio_rt.jpg')),
+                                                        (2,'renault_clio_rt_derecha', LOAD_FILE('../img/renault_clio_rt_derecha.jpg')),
+                                                        (3, 'renault_clio_rt_back', LOAD_FILE('../img/renault_clio_rt_back.jpg')),
+                                                        (4, 'renault_clio_rt_interior', LOAD_FILE('../img/renault_clio_rt_interior.jpg'));
 

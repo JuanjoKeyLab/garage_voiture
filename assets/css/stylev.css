@@ -6,3 +6,9 @@ section {
     margin-top: 50px;
 
 }
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 0;
+  }
+  

@@ -11,7 +11,7 @@
   
   header {
     /* background: linear-gradient(to top, rgba(234, 205, 205, 0.591), rgba(230, 37, 37, 0.182)); */
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.591), rgb(186, 32, 32));
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.592), rgb(191, 34, 34)%, 44%));
 }
 
 .listing-card__image {

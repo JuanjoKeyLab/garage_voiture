@@ -10,12 +10,10 @@ define('DB_NAME', 'juanjokeylab_live'); // Remplacez par le nom de votre base de
 define('DB_URL', 'jdbc:mariadb://mysql-juanjokeylab.alwaysdata.net:3306/juanjokeylab_live');
 
 
-// // Crea una conexión
+// // Créer une connexion
 $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
-// Verifica la conexión
+// Verifier la connexion
 if ($conn->connect_error) {
   die("La conexión falló: " . $conn->connect_error);
 }
-
-// echo "Conexión exitosa";

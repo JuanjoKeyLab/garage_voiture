@@ -20,18 +20,23 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
 
 /* PAGINA VOITURE.HTML */
 
-// el contenedor para las cards de los autos
+
+// Le conteneur pour display cards 
 const allVoitures_container = document.getElementById("allVoitures");
-// variable donde se guardaran TODOS los autos
+
+// Variable pour stocker des voitures
 let voitures = [];
 
-// fetch al controlador 'car_details.php' y recuperar los autos
+// fetch vers 'car_details.php et recuperer des voitures
 fetch('car_details.php')
   .then(response => response.json())
   .then(data => {
-    // guardamos el resultado (data) en la variable 'voitures'
+
+    // on sauvgarde (data) et la variable 'voitures'
     voitures = data;
-    // llamamos a la funcion para que cree las cards de cada auto automaticamente
+
+   
+    // on appelle la fonction pour la creation des cards avec les données de voiture souhaité
     makeVoitureCards(data);
     console.log(data)
   })
@@ -40,13 +45,14 @@ fetch('car_details.php')
   });
 
 
-// funcion para guardar el auto cliqueado con el boton 'acheter' en el LocalStorage del navegador
+// Fonction pour sauvgarder le voiture en faisant clic au bouton 'acheter' dans le LocalStorage du navigateur  
 function setSelectedCar(id) {
   const selectedCar = voitures.find((car) => car.voiture_id == id);
   localStorage.setItem('currentCar', JSON.stringify(selectedCar));
 }
 
-// Función para crear un elemento HTML con la información de un coche
+
+//fonction pour la création d'un élément HTML avec la information d'un voiture
 function createCarElement(car) {
   const article = document.createElement('article');
   article.className = 'col-12 col-md-6 col-xl-4 p-2';
@@ -94,7 +100,8 @@ function createCarElement(car) {
         <div class="card-footer text-body-secondary"></div>
       </div>
     `;
-  // Agregar evento click al enlace
+ 
+  // Ajouter event CLIC dans le link 
   const link = article.querySelector(`#link_formulaire_voiture_${car.voiture_id}`);
   link.addEventListener('click', () => {
     const selectedCarId = link.getAttribute('data-voiture-id');
@@ -104,7 +111,8 @@ function createCarElement(car) {
   return article;
 }
 
-// funcion encargada de generar las 'cards' para cada auto.
+
+// Fonction en charge de génerer des 'cards' pour chaque voiture 
 function makeVoitureCards(voitures) {
   voitures.forEach(voiture => {
     const carElement = createCarElement(voiture);
@@ -112,7 +120,7 @@ function makeVoitureCards(voitures) {
   });
 };
 
-// filtrando los autos
+// filtrage les voitures
 const voitureBrand = document.getElementById('voiture_brand');
 const voitureModel = document.getElementById('voiture_model');
 const voitureKm = document.getElementById('voiture_km');
@@ -120,37 +128,46 @@ const voitureYear = document.getElementById('voiture_year');
 const btnRechercherVoiture = document.getElementById('btn_voiture_rechercher');
 
 function filterVoitures(cars) {
-  // esto es para borrar las cards de los autos que se renderizaron al principio
+
+  //delete des cards voitures  
   allVoitures_container.innerHTML = '';
-  // Obtener los valores seleccionados de los select
+  
+  // Obtenir les valeurs selectionnées de les SELECT
   const selectedBrand = voitureBrand.value.toLowerCase();
   const selectedModel = voitureModel.value.toLowerCase();
   const selectedKm = voitureKm.value;
   const selectedYear = voitureYear.value;
 
-  // Filtrar el array de coches
+  
+  //Filtrage d'array de voiture
   const results = cars.filter(car => {
-    // Convertir las propiedades del coche a minúsculas para hacer comparaciones insensibles a mayúsculas
+    //Pour la sensibilite aux mayuscules 
     const carBrand = car.brand_name.toLowerCase();
     const carModel = car.model.toLowerCase();
 
-    // Verificar cada condición de filtrado
+  
+    // Vérification de chaque condition de filtrage
     const brandCondition = !selectedBrand || carBrand === selectedBrand;
     const modelCondition = !selectedModel || carModel === selectedModel;
     const kmCondition = !selectedKm || parseInt(car.km) <= parseInt(selectedKm);
     const yearCondition = !selectedYear || car.year === selectedYear;
 
-    // Devolver true si todas las condiciones se cumplen
+    
+    //TRUE si les conditions sont remppli
     return brandCondition && modelCondition && kmCondition && yearCondition;
   });
 
-  // Devolver los resultados filtrados
+  // Retourner les résultats filtrés
   return results;
 }
-// evento 'click' en el boton de filtrado
+
+// event 'clic' bouton filtré
 btnRechercherVoiture.addEventListener('click', () => {
-  // guardamos los autos filtrados en la variable
+  
+// on sauvegarde l'information
   const filteredVoitures = filterVoitures(voitures);
-  // llamamos a la funcion que crea las cards pero ahora con los autos filtrados
+  
+
+// On appelle la fonction qu'a créé des cards avec les voitures filtrés 
   makeVoitureCards(filteredVoitures)
 });

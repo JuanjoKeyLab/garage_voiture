@@ -1,94 +1,36 @@
-
 <?php
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-// error_reporting(E_ALL);
-
-define('DB_HOST', 'mysql-juanjokeylab.alwaysdata.net'); // Remplacez par votre hôte MySQL
-define('DB_USER', '332332_live'); // Remplacez par votre nom d'utilisateur MySQL
-define('DB_PASS', 'Unrealtournament2004!'); // Remplacez par votre mot de passe MySQL
-define('DB_NAME', 'juanjokeylab_live'); // Remplacez par le nom de votre base de données
-define('DB_URL', 'jdbc:mariadb://mysql-juanjokeylab.alwaysdata.net:3306/juanjokeylab_live');
+include_once('./Model/connection.php');
+// Le modèle de connexion est importé avec la variable $conn nous pouvons consulter les contrôleurs
+// C'est possible de faire la même chose dans d’autres « contrôleurs » pour inclure la connexion et l’utiliser où j'ai en besoin, ce qui m'évite de la taper à chaque fois
 
 
-// // Crea una conexión
-$conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+// SQL pour toutes les voitures avec leur marque, je peux ajouter des choses que je dois apporter de la base de données en respectant toujours les noms des colonnes
+$sql = "SELECT  a.voiture_id, a.photo2, a.photo3, a.photoSrc, a.price, a.model, a.km, a.year, b.brand_name, b.brand_description, b.employe_id
+    FROM allVoitures a
+    INNER JOIN Brand b ON a.brand_id = b.brand_id";
 
-// Verifica la conexión
-if ($conn->connect_error) {
-  die("La conexión falló: " . $conn->connect_error);
-}
-
-// echo "Conexión exitosa";
-
-// Ejecutar la consulta SQL
-$sql = "SELECT allVoitures.photo, allVoitures.photoSrc, allVoitures.price, allVoitures.model, allVoitures.km, allVoitures.year, Brand.brand_name, Brand.brand_description, Brand.employe_id
-    FROM allVoitures
-    INNER JOIN Brand ON allVoitures.brand_id = Brand.brand_id";
-
+// Exectuer la requete SQL avec la variable $conn de modele de connexion
 $result = $conn->query($sql);
 
-// Verificar si la consulta SQL fue exitosa
+// Verifier si la connexion a reussi 
 if ($result->num_rows > 0) {
-  // Crear un array para almacenar los resultados
+  // Creation d'un array pour stocker les resultats
   $results_array = array();
 
-  // Iterar sobre los resultados y agregarlos al array
+  // Iterer dans les resultats et les ajouter dans l'array 
   while($row = $result->fetch_assoc()) {
     $results_array[] = $row;
   }
 
-  // Convertir el array en un objeto JSON
+  // Convertir l'array en objet JSON
   $json_results = json_encode($results_array);
 
-  // Imprimir los resultados en formato JSON
+  // Impresion de resultats en format JSON
   header('Content-Type: application/json');
   echo $json_results;
 } else {
   echo "0 resultados";
 }
 
-// Cerrar la conexión
+// Fermeture de connexion
 $conn->close();
-
-
-
-
-//otra consulta
-//buscar requetes anidadas
-/* $sql2 = "SELECT allVoitures.photo allVoitures.model, allVoitures.km, allVoitures.year, Brand.brand_name, Brand.brand_description, Brand.employe_id
-    FROM allVoitures
-    INNER JOIN Brand ON allVoitures.brand_id = Brand.brand_id
-    WHERE allVoitures.voiture_id = 1 AND allVoitures.voiture_id IN ($sqlPhotos)"; */
-
-
-
-// Verificar si la consulta SQL fue exitosa
-/* if ($result->num_rows > 0) {
-  // Imprimir los resultados
-  while($row = $result->fetch_assoc()) {
-    echo "Modelo: " . $row["model"]. "<br>";
-    echo "Kilometraje: " . $row["km"]. "<br>";
-    echo "Año: " . $row["year"]. "<br>";
-    echo "Marca: " . $row["brand_name"]. "<br>";
-    echo "Descripción de la marca: " . $row["brand_description"]. "<br>";
-    echo "ID del empleado: " . $row["employe_id"]. "<br>";
-    echo "photo" . $row["photo"];
-  }
-} else {
-  echo "0 resultados";
-} */
-  
-  // Cerrar la conexión
-//   $conn->close();
-
-// // Cierra la conexión
-//  $conn->close();
-
-// $brand = $_POST['brand'];
-// $model = $_POST['model'];
-// $km = $_POST['km'];
-// $price = $_POST['price'];
-// $photo = $_POST['photo'];
-// $description = $_POST['description'];
-?>

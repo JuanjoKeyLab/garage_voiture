@@ -137,11 +137,16 @@ CREATE TABLE ajouter(
 	,CONSTRAINT ajouter_employe_FK FOREIGN KEY (employe_id) REFERENCES employe(employe_id)
 	,CONSTRAINT ajouter_temoignages0_FK FOREIGN KEY (id_temoignages) REFERENCES temoignages(id_temoignages)
 )ENGINE=InnoDB;
-# alimentation, code, donnees
 
-INSERT INTO allVoitures (voiture_id, model, year, price, km, description, photoSrc, photo2, photo3) VALUES ('renault', 'clio', 1997, 1800, 176540, 'RT essence, boat manuelle, 1.4 ');
-        INSERT INTO photos(photo_id, model_id, photos) VALUES (1,'renault_clio_rt',LOAD_FILE('../img/renault_clio_rt.jpg')),
-UPDATE allVoitures
-        SET photoSrc = '../img/renault/clio/clio_rt_derecha.sql', photo2 = '../img/renault/clio/clio_rt_interior.sql', photo3 = '../img/renault/clio/clio_rt_derecha.sql'
-        WHERE voiture_id = '1';
+
+
+#------------------------------------------------------------
+#------------------------------------------------------------
+
+# Alimentation, base de donnees
+
+-- INSERT INTO allVoitures (voiture_id, model, year, price, km, description, photoSrc, photo2, photo3) VALUES ('renault', 'clio', 1997, 1800, 176540, 'RT essence, boat manuelle, 1.4 ');
+-- UPDATE allVoitures
+--         SET photoSrc = '../img/renault/clio/clio_rt_derecha.sql', photo2 = '../img/renault/clio/clio_rt_interior.sql', photo3 = '../img/renault/clio/clio_rt_derecha.sql'
+--         WHERE voiture_id = '1';
 

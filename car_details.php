@@ -1,36 +1,35 @@
 <?php
 include_once('./Model/connection.php');
-// Le modèle de connexion est importé avec la variable $conn nous pouvons consulter les contrôleurs
-// C'est possible de faire la même chose dans d’autres « contrôleurs » pour inclure la connexion et l’utiliser où j'ai en besoin, ce qui m'évite de la taper à chaque fois
+// importa el modelo de conneccion, con la variable $conn podemos hacer las consultas en los controladores
+// podes hacer lo mismo en otros 'controladores' para incluir la coneccion y usarla donde la necesites, te ahorra escribirla a cada vez
 
-
-// SQL pour toutes les voitures avec leur marque, je peux ajouter des choses que je dois apporter de la base de données en respectant toujours les noms des colonnes
+// Consulta sql para todos los autos con sus brand, podes agregar cosas que necesites traer de la base de datos respetando bien siempre los nombres de las columnas
 $sql = "SELECT  a.voiture_id, a.photo2, a.photo3, a.photoSrc, a.price, a.model, a.km, a.year, b.brand_name, b.brand_description, b.employe_id
     FROM allVoitures a
     INNER JOIN Brand b ON a.brand_id = b.brand_id";
 
-// Exectuer la requete SQL avec la variable $conn de modele de connexion
+// Ejecutar la consulta SQL con la variable $conn del modelo de conneccion
 $result = $conn->query($sql);
 
-// Verifier si la connexion a reussi 
+// Verificar si la consulta SQL fue exitosa
 if ($result->num_rows > 0) {
-  // Creation d'un array pour stocker les resultats
+  // Crear un array para almacenar los resultados
   $results_array = array();
 
-  // Iterer dans les resultats et les ajouter dans l'array 
+  // Iterar sobre los resultados y agregarlos al array
   while($row = $result->fetch_assoc()) {
     $results_array[] = $row;
   }
 
-  // Convertir l'array en objet JSON
+  // Convertir el array en un objeto JSON
   $json_results = json_encode($results_array);
 
-  // Impresion de resultats en format JSON
+  // Imprimir los resultados en formato JSON
   header('Content-Type: application/json');
   echo $json_results;
 } else {
   echo "0 resultados";
 }
 
-// Fermeture de connexion
+// Cerrar la conexión
 $conn->close();
